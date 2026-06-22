@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | Riverbird</title>
+  <meta name="description" content="Join Riverbird's engineering and design team. Explore open jobs in IT, digital marketing, and internships." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico">
+  <link rel="manifest" href="../assets/img/site.webmanifest">
+  <meta name="theme-color" content="#F55D2D">
+</head>
+<body data-page="careers">
+
+  <a href="#main-content" class="skip-link">Skip to Content</a>
+
+  <div class="cursor-glow"></div>
+  <canvas class="liquid-canvas"></canvas>
+  <div id="header-slot"></div>
+
+  <main id="main-content" class="liquid-wrapper">
+
+    <section class="hero" style="min-height: 60vh; padding-bottom: var(--space-48);">
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <span class="hero__label">Careers</span>
+          <h1 class="display-text hero__title">
+            Build software, <span class="text-primary-color">scale companies.</span>
+          </h1>
+          <p class="hero__desc">
+            We are always looking for senior developers, creative managers, and growth strategists who appreciate technical precision and clean workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white" id="jobs-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="label-text">Opportunities</span>
+          <h2 class="h2">Open Positions</h2>
+          <p class="body-text">Filter by department and find your next role at Riverbird.</p>
+        </div>
+
+        <div class="careers-filter reveal">
+          <button class="careers-filter__btn careers-filter__btn--active" data-filter="all">All Jobs</button>
+          <button class="careers-filter__btn" data-filter="it">Engineering (IT)</button>
+          <button class="careers-filter__btn" data-filter="marketing">Digital Marketing</button>
+          <button class="careers-filter__btn" data-filter="internship">Internships</button>
+        </div>
+
+        <div id="careers-jobs-grid" style="margin-bottom: var(--space-64);"></div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-light" id="apply-section">
+      <div class="container" style="max-width: 680px;">
+        <div class="section-header center">
+          <span class="label-text">Application</span>
+          <h2 class="h2">Apply Now</h2>
+          <p class="body-text">Complete the fields below and upload your resume profile directly to our recruiting cell.</p>
+        </div>
+
+        <form class="card reveal" id="apply-form" style="border: 1px solid var(--color-border);">
+          <div class="form-group">
+            <label class="form-label" for="apply-name">Full Name</label>
+            <input type="text" id="apply-name" class="form-input" required placeholder="Enter your full name" />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="apply-email">Email Address</label>
+            <input type="email" id="apply-email" class="form-input" required placeholder="name@company.com" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="apply-job-input">Target Position</label>
+            <input type="text" id="apply-job-input" class="form-input" required placeholder="e.g. Senior Backend Engineer" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Resume / CV Upload</label>
+            <div class="file-upload" onclick="document.getElementById('apply-file-input').click()">
+              <span class="file-upload__icon" style="margin-bottom: var(--space-8); display: block; color: var(--color-primary);">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              </span>
+              <div class="file-upload__text" id="file-upload-label">Drag & drop or click to choose CV (PDF/DOCX)</div>
+              <input type="file" id="apply-file-input" required onchange="document.getElementById('file-upload-label').textContent = this.files[0].name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="apply-message">Cover Note (Optional)</label>
+            <textarea id="apply-message" class="form-textarea" placeholder="Brief details about your technical accomplishments..."></textarea>
+          </div>
+
+          <div style="margin-top: var(--space-12);">
+            <button type="submit" class="btn btn--primary" style="width: 100%;">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-slot"></div>
+  <script type="module" src="../assets/js/core/app.js"></script>
+</body>
+</html>
